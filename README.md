@@ -20,13 +20,13 @@ apple = "바나나"; // TypeError: Assignment to constant variable // var과 let
 
 
 3. let lotto = [3, 8, 13, 19, 21, 32];
-console.log(lotto[3]); // 결과값 <  >
+console.log(lotto[3]); // 결과값 < 19 > // lotto[3] 은 배열에 4번째 위치한 Index의 값을 말합니다.
 
 
 4.
 let mySchedule = "";
-console.log(mySchedule || false); // < 빈칸 >
-console.log(!!mySchedule); // < 빈칸 >
+console.log(mySchedule || false); // < false > // false는 결과값 false를 반환
+console.log(!!mySchedule); // < false > // !는 반대를 뜻하는데 !가 2번이라 false
 
 ```
 
@@ -43,13 +43,16 @@ console.log(!!mySchedule); // < 빈칸 >
 예시
 
 ```javascript
-const junhyun = {
-    // 조건을 충족하는 코드 작성
+const jungSoHyun = {
+  // 조건을 충족하는 코드 작성
+  name: "정소현",
+  age: 25,
+  MBTI: "ENTJ",
 };
 
-console.log(이름이 나오게 콘솔을 실행시켜 주세요.);
-console.log(나이가 나오게 콘솔을 실행시켜 주세요.);
-console.log(MBTI가 나오게 콘솔을 실행시켜 주세요.);
+console.log(jungSoHyun.name);
+console.log(jungSoHyun.age);
+console.log(jungSoHyun.MBTI);
 ```
 
 &nbsp;
@@ -61,14 +64,16 @@ console.log(MBTI가 나오게 콘솔을 실행시켜 주세요.);
 예시
 
 ```javascript
-function 함수명(매개변수) {
+function solution(number) {
   // 코드를 작성해 주세요.
+  return number % 2 === 0 ? "짝수" : "홀수";
 }
 
 console.log(함수명(10)); // 결과값 "짝수";
 console.log(함수명(7)); // 결과값 "홀수";
 ```
 
+// 2로 나누었을 떄 아무것도 남지 않으면 짝수, 남으면 홀수
 &nbsp;
 
 ## 4. 계산기 문제
@@ -79,14 +84,25 @@ console.log(함수명(7)); // 결과값 "홀수";
 예시
 
 ```javascript
-function 함수명(매개변수1, 매개변수2, 매개변수3) {
+function calculator(num1, sign, num2) {
   // 코드를 작성해주세요.
+    let answer = 0;
+    if (sign === "+"){
+        num1 + num2 = answer
+    }else if(sign === "-"){
+        num1 - num2 = answer
+    }else if(sign ==="*"){
+        num * num2 = answer
+    }else(sign === "/"){
+        num / num2 = answer
+    }
+    return answer
 }
-
+// 입력받은 연산자를 판단하여 num1과 num2 를 처리하여 answer를 반환시켰습니다.
 함수명(3, "+", 6); // 결과값 9
 함수명(11, "-", 6); // 결과값 5
 함수명(6, "*", 3); // 결과값 18
-함수명(15, "+", 3); // 결과값 5
+함수명(15, "/", 3); // 결과값 5
 ```
 
 &nbsp;
@@ -104,7 +120,8 @@ scores에 있는 학생들의 점수를 반복문을 통해 3점씩 올리게 �
 ```javascript
 const scores = [36, 62, 72, 55, 86, 95, 92, 48, 81];
 
-function 함수명(scores) {
+function plusScore(scores) {
+  calculator(scores, "+", 3);
   // 4번 문제의 계산기 함수를 활용한 코드를 작성해주세요.
 }
 
