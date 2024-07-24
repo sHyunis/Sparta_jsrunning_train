@@ -12,28 +12,28 @@
 
 ```javascript
 1. let uninitialized;
-console.log(uninitialized); // 결과값 < 빈칸 >
+console.log(uninitialized); // 결과값 < undefined > // 아무것도 할당해주지 않았기 떄문에 undefined가 뜹니다.
 
 
-2. < 빈칸 > apple = "사과";
-apple = "바나나"; // TypeError: Assignment to constant variable
+2. < const > apple = "사과";
+apple = "바나나"; // TypeError: Assignment to constant variable // var과 let은 재할당이 가능하지만 const는 재할당이 불가합니다.
 
 
 3. let lotto = [3, 8, 13, 19, 21, 32];
-console.log(lotto[3]); // 결과값 < 빈칸 >
+console.log(lotto[3]); // 결과값 <  >
 
 
-4. 
+4.
 let mySchedule = "";
 console.log(mySchedule || false); // < 빈칸 >
 console.log(!!mySchedule); // < 빈칸 >
 
 ```
 
-
 &nbsp;
 
 ## 2. 객체 선언해보기
+
 지난 시간에 배웠던 객체(object)를 다시 복습해보며, 아래의 조건을 충족하는 객체를 직접 선언해보세요.
 
 - 자기 자신을 소개하는 객체입니다.
@@ -52,34 +52,35 @@ console.log(나이가 나오게 콘솔을 실행시켜 주세요.);
 console.log(MBTI가 나오게 콘솔을 실행시켜 주세요.);
 ```
 
-
 &nbsp;
 
 ## 3. 홀짝 판별기
+
 지난 시간에 배웠던 연산자를 활용하여, 숫자를 입력하면 홀수인지 짝수인지 판별하는 함수를 만들어 보려고 합니다. 다음과 같은 결과값이 나올 수 있도록 코드를 작성해 주세요.
 
 예시
 
 ```javascript
 function 함수명(매개변수) {
-    // 코드를 작성해 주세요.
+  // 코드를 작성해 주세요.
 }
 
 console.log(함수명(10)); // 결과값 "짝수";
 console.log(함수명(7)); // 결과값 "홀수";
 ```
 
-
 &nbsp;
 
 ## 4. 계산기 문제
+
 연산자와 함수, 조건문을 토대로 계산기 함수를 하나 만들어 보려고 합니다.
 함수에 숫자 , 연산자 , 숫자 세 개의 매개변수를 넣었을 때 해당 연산자를 기준으로 연산을 해서 값을 반환하는 함수를 만들어주세요.
 
 예시
+
 ```javascript
 function 함수명(매개변수1, 매개변수2, 매개변수3) {
-    // 코드를 작성해주세요.
+  // 코드를 작성해주세요.
 }
 
 함수명(3, "+", 6); // 결과값 9
@@ -94,19 +95,17 @@ function 함수명(매개변수1, 매개변수2, 매개변수3) {
 
 5번 문제는 필수 문제가 아닌, 4번까지 풀고 여유가 있을 때 풀어보는 선택 문제입니다.
 
-
 &nbsp;
 
-학교에서 시험을 보았는데 전산 문제로 한 문제의 답이 전부 오답처리가 된 바람에 학생들의 점수를 전부 3점씩 올려주어야 합니다. 
+학교에서 시험을 보았는데 전산 문제로 한 문제의 답이 전부 오답처리가 된 바람에 학생들의 점수를 전부 3점씩 올려주어야 합니다.
 
 scores에 있는 학생들의 점수를 반복문을 통해 3점씩 올리게 고쳐주시는데 4번 문제를 통해 만든 계산기 함수를 통해 더해주세요.
-
 
 ```javascript
 const scores = [36, 62, 72, 55, 86, 95, 92, 48, 81];
 
 function 함수명(scores) {
-    // 4번 문제의 계산기 함수를 활용한 코드를 작성해주세요.
+  // 4번 문제의 계산기 함수를 활용한 코드를 작성해주세요.
 }
 
 console.log(scores);
