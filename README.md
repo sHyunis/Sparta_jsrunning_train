@@ -26,7 +26,7 @@ console.log(lotto[3]); // 결과값 < 19 > // lotto[3] 은 배열에 4번째 위
 4.
 let mySchedule = "";
 console.log(mySchedule || false); // < false > // false는 결과값 false를 반환
-console.log(!!mySchedule); // < false > // !는 반대를 뜻하는데 !가 2번이라 false
+console.log(!!mySchedule); // < false > // mySchedule은 빈문자열 빈문자열 False / !는 결과값의 반대를 뜻하는데 !가 2번이라 false
 
 ```
 
@@ -85,24 +85,24 @@ console.log(함수명(7)); // 결과값 "홀수";
 
 ```javascript
 function calculator(num1, sign, num2) {
-  // 코드를 작성해주세요.
-    let answer = 0;
-    if (sign === "+"){
-        num1 + num2 = answer
-    }else if(sign === "-"){
-        num1 - num2 = answer
-    }else if(sign ==="*"){
-        num * num2 = answer
-    }else(sign === "/"){
-        num / num2 = answer
-    }
-    return answer
+  // 입력받은 연산자를 판단하여 num1과 num2 를 처리하고 answer를 반환시켰습니다.
+  let answer = 0;
+  if (sign === "+") {
+    answer = num1 + num2;
+  } else if (sign === "-") {
+    answer = num1 - num2;
+  } else if (sign === "*") {
+    answer = num1 * num2;
+  } else if (sign === "/") {
+    answer = num1 / num2;
+  } else console.log("잘못 입력하셨습니다");
+
+  return answer;
 }
-// 입력받은 연산자를 판단하여 num1과 num2 를 처리하여 answer를 반환시켰습니다.
-함수명(3, "+", 6); // 결과값 9
-함수명(11, "-", 6); // 결과값 5
-함수명(6, "*", 3); // 결과값 18
-함수명(15, "/", 3); // 결과값 5
+calculator(3, "+", 6); // 결과값 9
+calculator(11, "-", 6); // 결과값 5
+calculator(6, "*", 3); // 결과값 18
+calculator(15, "/", 3); // 결과값 5
 ```
 
 &nbsp;
@@ -120,11 +120,18 @@ scores에 있는 학생들의 점수를 반복문을 통해 3점씩 올리게 �
 ```javascript
 const scores = [36, 62, 72, 55, 86, 95, 92, 48, 81];
 
-function plusScore(scores) {
-  calculator(scores, "+", 3);
+function plusScore(numArray) {
+  let scoreAnswer = [];
+  for (i = 0; i < numArray.length; i++) {
+    scoreAnswer.push(calculator(numArray[i], "+", 3));
+  }
+  return scoreAnswer;
   // 4번 문제의 계산기 함수를 활용한 코드를 작성해주세요.
 }
-
+plusScore(scores);
 console.log(scores);
+console.log(plusScore(scores));
 // 기대값: [39, 65, 75, 58, 89, 98, 95, 51, 84]
 ```
+
+// 배열에 있는 숫자들에 반복적으로 숫자를 더해줘야 해서 반복문을 썼습니다.
